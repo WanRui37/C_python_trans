@@ -1,0 +1,12 @@
+g++ -std=c++11 -o pybind11_torch_matrix pybind11_torch_matrix.cpp \
+    -I /home/ic611/anaconda3/envs/torch-1.13/lib/python3.10/site-packages/pybind11/include \
+    -I /home/ic611/anaconda3/envs/torch-1.13/include/python3.10 \
+    -I /home/ic611/anaconda3/envs/torch-1.13/lib/python3.10/site-packages/torch/include \
+    -L /home/ic611/anaconda3/envs/torch-1.13/lib \
+    -L /home/ic611/anaconda3/envs/torch-1.13/lib/python3.10/site-packages/torch/lib \
+    -lpython3.10 \
+    -ltorch \
+    -ltorch_cpu \
+    -lc10 \
+    -Wl,-rpath,/home/ic611/anaconda3/envs/torch-1.13/lib \
+    -Wl,-rpath,/home/ic611/anaconda3/envs/torch-1.13/lib/python3.10/site-packages/torch/lib
